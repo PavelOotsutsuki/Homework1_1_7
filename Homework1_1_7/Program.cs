@@ -15,12 +15,14 @@ namespace Homework1_1_7
             int waitingFull;
             int waitingHour;
             int waitingMinute;
+            int convertTimeValue=60;
+
 
             Console.Write("Введите количество старушек перед Вами в очереди: ");
             oldWoman = Convert.ToInt32 (Console.ReadLine ());
             waitingFull = oldWoman * waitingOneMan;
-            waitingHour = waitingFull / 60;
-            waitingMinute = waitingFull % 60;
+            waitingHour = waitingFull / convertTimeValue;
+            waitingMinute = waitingFull % convertTimeValue;
             Console.WriteLine("Вам осталось ждать в очереди " + waitingHour + " ч " + waitingMinute + " минут.");
         }
     }
